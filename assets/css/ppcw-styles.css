@@ -1,0 +1,88 @@
+
+.ccpw-ticker-cont{
+  width:100%;
+  overflow: hidden;
+  cursor:pointer;
+}
+.ccpw-footer-ticker-fixedbar{
+position:fixed;    
+border-top: 1px solid #ccc;
+bottom: 0px!important; 
+font-family: Arial, Helvetica, sans-serif; 
+width:100%; 
+z-index:99999; 
+background: #fff;
+font-weight: bold;
+cursor: pointer;
+}
+
+.ccpw-header-ticker-fixedbar {
+position:fixed;    
+border-top: 1px solid #ccc;
+top:0; 
+font-family: Arial, Helvetica, sans-serif; 
+width:100%; 
+z-index:99999; 
+background: #fff;
+font-weight: bold;
+cursor: pointer;
+}
+
+
+ul.marquee-content-items li{
+	float:left;
+	margin:0 10px;
+	list-style:none;
+}
+.ccpw-fixedbar {
+border-top: 1px solid #ccc;
+bottom: 0px!important; 
+ position:fixed;
+width:100%; 
+z-index:99999; 
+background: #fff;
+}
+
+ul.marquee-content-items li:after{
+	content: "|";
+	margin: 0 1em;
+}
+.coin-container img{
+	height: 20px;
+   /* width: 20px;*/
+}
+.ticker td{
+	border: none;
+}
+.ccpw_widget .ccpw_table td{
+	border: none;
+}
+.ccpw_widget .ccpw_table tr{
+	border-bottom: 1px solid black;
+}
+.ccpw_table th{
+	border: none;
+}
+span.name {
+    font-size: 14px;
+    margin-left: 6px;
+}
+span.price {
+    font-size: 12px;
+    margin-left: 8px;
+}
+span.changes.up {
+    color: green;
+    margin-left: 3px;
+}
+span.changes.down {
+    color: red;
+	margin-left: 3px;
+}
+.image-coin{
+	width:40px;
+}
+.ccpw_icon img{
+	margin-left: 8px;
+	vertical-align: middle;
+}
