@@ -19,7 +19,6 @@ cursor: pointer;
 .ccpw-header-ticker-fixedbar {
 position:fixed;    
 border-top: 1px solid #ccc;
-top:0; 
 font-family: Arial, Helvetica, sans-serif; 
 width:100%; 
 z-index:99999; 
@@ -48,7 +47,7 @@ ul.marquee-content-items li:after{
 	margin: 0 1em;
 }
 .coin-container img{
-	height: 20px;
+	height:24px;
    /* width: 20px;*/
 }
 .ticker td{
@@ -63,11 +62,32 @@ ul.marquee-content-items li:after{
 .ccpw_table th{
 	border: none;
 }
-span.name {
+.ccpw_table span.name {
+	font-weight:bold;
+}
+.ccpw_table span.name {
+    font-size: 16px;
+    margin-left: 6px;
+}
+.ccpw_table span.coin_symbol{
+ font-size:14px;
+   
+}
+.ccpw-ticker-cont span.name {
     font-size: 14px;
     margin-left: 6px;
 }
-span.price {
+
+.ccpw-ticker-cont span.price {
+     font-size: 12px;
+    margin-left: 8px;
+}
+.ccpw_table  th, td{
+	border:0;
+	border-bottom:1px solid #cacaca!important;
+
+}
+.ccpw_table span.price {
     font-size: 12px;
     margin-left: 8px;
 }
@@ -82,7 +102,38 @@ span.changes.down {
 .image-coin{
 	width:40px;
 }
-.ccpw_icon img{
-	margin-left: 8px;
-	vertical-align: middle;
+.ccpw_icon img {
+    margin-left: 8px;
+    vertical-align: top;
+    margin-top: 5px;
+}
+
+/* version 1.4 styles */
+
+.ccpw_table .ccpw_icon.ccpw_coin_logo{
+    display: inline-block;
+    vertical-align: middle;
+    width: auto;
+}
+
+.ccpw_table .ccpw_icon.ccpw_coin_logo img{
+	height:32px;
+}
+.ccpw_table .ccpw_coin_info{
+ display: inline-block;
+    vertical-align: middle;
+    padding:8px 4px;
+}
+
+.ccpw_table tr td{
+	padding:8px 4px;
+}
+.tickercontainer {
+  /*  background-color: #ffffff;*/
+    margin-bottom: 2px;
+}
+@media only screen and (max-width: 500px) {
+.ccpw_coin_info .coin_symbol{
+	display:none;
+}
 }

@@ -1,8 +1,8 @@
 ﻿=== Cryptocurrency Price Ticker Widget ===
 Contributors: narinder-singh,satindersingh
-Tags: bitcoin, cryptocurrency, price, ticker, crypto
+Tags: bitcoin, cryptocurrency, price, ticker, crypto,Cryptocurrency Market Capitalizations
 Requires at least: 3.5
-Tested up to: 4.9.2
+Tested up to: 4.9.4
 Requires PHP: 5.6
 Stable tag: trunk
 License: GPL2
@@ -15,6 +15,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 <h4>Check Crypto Widget Demos</h4>
 <blockquote><a href="http://cryptowidget.coolplugins.net">Crypto Widget Free Demo</a> | <a href="http://cryptowidgetpro.coolplugins.net">Crypto Widget Pro Demo</a></blockquote>
+
+<h4>Check Cryptocurrency Market Capitalizations Demos</h4>
+<blockquote><a target="_blank" href="https://coinmarketcapinfo.com/plugin/">Coin Market Cap</a></blockquote>
 
 <p>Display coin market current price and daily price change ticker and <strong>crypto pricing table</strong> anywhere inside your website using smart crypto widget shortcodes. You can also color customize these virtual coin widgets according to your website look and feel.</p>
 
@@ -32,11 +35,26 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 <li>It supports both COINMARKETCAP & CYPTOCOMPARE apis.</li>
 <li>You can display live price changes in pro version.</li>
 <li>It supports 100+ top coins.</li>
+<li>You can display Price chart and coin detials in pro version</li>
 <li>You can create beautiful price label and crypto price cards.</li>
 <li>Different currency support - USD, INR, Pound, Euro, Yen, WON</li>
 <li>Display hourly, 24hour and 7 days price change.</li>
 <li>Display market cap and volume of virtual crypto coins.</li>
 </ul>
+
+<h3>Cryptocurrency Market Capitalizations PRO Plugin</h3>
+<p>Do you want to create a fully automated crypto price listing website? Our <strong><a target="_blank" href="https://coinmarketcapinfo.com/plugin/">Coin Market Cap</a></strong> WordPress plugin provides all settings to create your own crypto price listing website.</p>
+
+<p>We have <strong>1500+</strong> crypto coins inside our plugin and grab data using coinmarketcap.com API. You can show anything inside your crypto pricing table – marketcap, price, volume, changes, charts etc.
+</p>
+<p>
+Our plugin automatically generate <strong>single pages of every crypto-currency</strong> by using its data from CoinMarketCap.com API. Every coin page contains a lot of setting options.
+</p>
+<p>
+You can show price changes (1h%, 24h%, 7d%), market cap, coin volume, circulating supply and a beautiful price chart along with <strong>facebook comment</strong> box on single crypto coin page.
+</p>
+<p>Also this page is <strong>fully SEO optimized</strong>.</p>
+
 == Installation ==
 <h4>Install From WordPress Admin Panel</h4>
 <p>Open WordPress admin panel and go to Plugins >> Add New and Search <strong>"Cryptocurrency price ticker widget"</strong> at here, You will find our plugin <strong>"by Cool Timeline Team"</strong>. Click on Install button in front of this and then activate the plugin.</p>
@@ -64,15 +82,25 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 1. Cryptocurrency Price Widget Demo.
 2. Cryptocurrency Price Ticker Widget in header/footer demo.
 3. Cryptocurrency Price Ticker Widget settings and shortcode.
-4. Use shortcode in any page or post.
-5. Use shortcode in WordPress Widgets section.
-6. Cryptocurrency Price Ticker Widget Pro -Card Layout.
-7. Cryptocurrency Price Ticker Widget Pro - Label Layouts.
-8. Cryptocurrency Price Ticker Widget Pro -Ticker Styles.
-9. Cryptocurrency Price Ticker Widget Pro - Real Time Update Demo.
+4. Use shortcode in WordPress Widgets section.
+5. Cryptocurrency Price Ticker Widget Pro -Card Layout.
+6. Cryptocurrency Price Ticker Widget Pro - Label Layouts.
+7. Cryptocurrency Price Ticker Widget Pro -Ticker Styles.
+8. Cryptocurrency Price Ticker Widget Pro - Real Time Update Demo.
+9. Cryptocurrency Market Capitalizations PRO Plugin
+10. Coin Market Cap Plugin Coin Single Page
 
 
 == Changelog ==
+--Version 1.4 | 20 Feb 2018--
+Added:- Integrated 10 more coins(Stellar, EOS, Ethereum Classic, Lisk,Tron, VeChain, Qtum, Bitcoin Gold, Tether, OmiseGO)
+Added:-Added Ticker position settings in plugin settings panel
+Added:-Added heading in list widgets style
+Improvements:Improved overall design of List widget 
+Improvements:-Minor CSS improvements
+Improvements:-Code Improvements
+Bug Fixing:-Fixed minor bugs
+Improvements:-Minor settings improvements
 --Version 1.3.1 | 23 Jan 2018--
 Bug Fixing:-Fixed header Ticker top spacing problem
 Added:- Added FAQ and installation guidelines

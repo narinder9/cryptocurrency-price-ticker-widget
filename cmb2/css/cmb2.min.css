@@ -2,6 +2,16 @@
     margin: 0
 }
 
+.cmc_pro{
+    display:inline;
+}
+.cmc_pro img{
+   width:45%;
+}
+#generate_shortcode .cmb2-wrap li {
+     float: left;
+    width: 120px;
+}
 .cmb2-wrap input,
 .cmb2-wrap textarea {
     font-size: 14px;
