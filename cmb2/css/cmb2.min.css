@@ -1,24 +1,26 @@
+
+
 .cmb2-wrap {
     margin: 0
 }
+ul.cmb2-radio-list.cmb2-list li{
+width:95px;
+}
 
-.cmc_pro{
-    display:inline;
-}
-.cmc_pro img{
-   width:45%;
-}
-#generate_shortcode .cmb2-wrap li {
-     float: left;
-    width: 120px;
-}
 .cmb2-wrap input,
 .cmb2-wrap textarea {
     font-size: 14px;
     max-width: 100%;
     padding: 5px
 }
+ul.cmb2-radio-list.cmb2-list li:last-child {
+    width: 200px;
+}
 
+.cmb2-wrap ul li{
+    float:left;
+    width:106px;
+}
 .cmb2-wrap input[type=text].cmb2-oembed {
     width: 100%
 }
