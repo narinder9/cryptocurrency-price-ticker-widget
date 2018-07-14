@@ -69,7 +69,6 @@ You can show price changes (1h%, 24h%, 7d%), market cap, coin volume, circulatin
 <p>YES, You can contact us anytime at here – contact@cooltimeline.com. We will try to provide an answer with in 24 hours.</p>
 
 # Changelog
-# New Document== Changelog ==
 <strong>Version 1.8.2 | 09 July 2018</strong>
 <pre>
 Fixed:- Unable to remove rating popup
