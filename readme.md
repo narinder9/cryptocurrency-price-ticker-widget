@@ -69,8 +69,63 @@ You can show price changes (1h%, 24h%, 7d%), market cap, coin volume, circulatin
 <p>YES, You can contact us anytime at here – contact@cooltimeline.com. We will try to provide an answer with in 24 hours.</p>
 
 # Changelog
-
---Version 1.4 | 20 Feb 2018--
+# New Document== Changelog ==
+<strong>Version 1.8.2 | 09 July 2018</strong>
+<pre>
+Fixed:- Unable to remove rating popup
+In Last update there was bug in rating popup.
+If you are unable to remove rating popup. 
+Please update your plugin version and click on "Already Done" button.
+If you are still unable to disable it please contact us.
+</pre>
+<strong>Version 1.8.1 | 06 July 2018</strong>
+<pre>
+Fixed:-Rating popup bug.
+</pre>
+<strong>Version 1.8 | 05 July 2018</strong>
+<pre>
+Added:-Integrated fiat currencies settings. Using this settings users can create price widget in any fiat currency like(GBP/EUR) etc.
+Added:-Introduced Price label layout.Using this layout users can easily display cryptocurrency price with your blog post or anywhere in the page.
+Added:-If you are already using our coin market cap plugin.this functionality will automatically genearte coin detail page links in all layouts.
+Improvement:-Formatted coin prices.
+Improvement:-Improvements in overall code. 
+Improvement:-Improvements ticker and label CSS styles.
+Improvement:-Interface improvements.
+Updated:- updated new screenshots and description.
+</pre>
+<strong>Version 1.7 | 03 May 2018</strong>
+<pre>
+Added:-Integrated top 50 coins.
+Fixed:-Fixed Major Bug in API's. 
+Improvement:-Improvements in API's Calls.
+</pre>
+<strong>Version 1.6.1 | 27 April 2018</strong>
+<pre>
+Fixed:Fixed Compatibility issues with Visual Composer
+</pre>
+<strong>Version 1.6 | 24 April 2018</strong>
+<pre>
+Added:-Integrated Brand new multi currency tab demo. Users can easily represent coin price in mulitple currencies.
+Added:-Introduced Crypto Currency shortcode widget. Using it user can easily add shortcode in widget section.
+Updated:-Conditional based settings panel.
+Fixed:-Fixed jerk problem
+Improvements:-Improved ticker styles and added ability to set multiple background colors
+</pre>
+<strong>Version 1.5 | 12 March 2018</strong>
+<pre>
+Added:-Integrated SVG logos for all cryptocurrencies.
+Updated:- Updated shortcode setting panel generator(CMB2 2.3.0)
+Fixed:- Fixed Admin panel Crashing problem.
+Updated:- compatibilty with PHP7.2
+Improvements:-Code Improvments
+Updated:-Updated plugin description and readme text.
+</pre>
+<strong>Version 1.4.1 | 21 Feb 2018</strong>
+<pre>
+Urgent Update:- Coin Market Cap Updated currencies logo API's Endpoint.So that's why coins logo is not working. In order to fix this problem, Please update your installed plugin version.
+</pre>
+<strong>Version 1.4 | 20 Feb 2018<strong>
+<pre>
 Added:- Integrated 10 more coins(Stellar, EOS, Ethereum Classic, Lisk,Tron, VeChain, Qtum, Bitcoin Gold, Tether, OmiseGO)
 Added:-Added Ticker position settings in plugin settings panel
 Added:-Added heading in list widgets style
@@ -79,23 +134,34 @@ Improvements:-Minor CSS improvements
 Improvements:-Code Improvements
 Bug Fixing:-Fixed minor bugs
 Improvements:-Minor settings improvements
-
-Version 1.3.1 | 23 Jan 2018--
+</pre>
+<strong>Version 1.3.1 | 23 Jan 2018</strong>
+<pre>
 Bug Fixing:-Fixed header Ticker top spacing problem
 Added:- Added FAQ and installation guidelines
 Added:- Updated plugin description and screenshots
 Improvements:-Minor Code improvements
 Improvements:-Minor CSS improvements
---Version 1.3 | 13 Jan 2018--
+</pre>
+<strong>Version 1.3 | 13 Jan 2018</strong>
+<pre>
 Bug Fixing:-Fixed Ticker preloading problem
 Added:- Added all shortcodes section.
 Added:- Added feedback section
 Improvements:-Ticker js improvements.
-
---Version 1.2 | 12 Jan 2018--
+</pre>
+<strong>Version 1.2 | 12 Jan 2018</strong>
+<pre>
 Bug Fixing:-Fixed Manero and dash missing bug
 Improvements:- Minor changes in code.
---Version 1.1 | 03 Jan 2018--
+</pre>
+<strong>Version 1.1 | 03 Jan 2018</strong>
+<pre>
 Bug Fixing:- While users are  displaying only single coin price,they are getting this error message. “You have not selected any currencies to display” error message. 
 Improvements:-Minor code improvements. 
+</pre>
+<strong>Version 1.0</strong>
 --Initial Release---
+
+== Upgrade Notice ==
+Major API's changes and integrated top 50 coins.
