@@ -96,7 +96,7 @@ if ($type == "ticker") {
   }
   $coin_html .= '<span class="mtab_name">' . $coin_name . '(' . $coin_symbol . ')</span>';
   $coin_html .= $coin_link_end;
-  $coin_html .= '<span data-aud="' . $aud_price . '" data-jpy="' . $jpy_price . '" data-gbp="' . $gbp_price . '" data-eur="' . $euro_price . '" data-usd="' . $usd_price . '" class="mtab_price">' . ccpwt_currency_symbol('USD') . $coin_price . '</span>';
+  $coin_html .= '<span data-aud="' . $aud_price . '" data-jpy="' . $jpy_price . '" data-gbp="' . $gbp_price . '" data-eur="' . $euro_price . '" data-usd="' . $usd_price . '" class="mtab_price">' . ccpwt_currency_symbol('USD') . ccpwt_format_number($coin_price) . '</span>';
 
   if ($display_changes) {
     $coin_html .= '<span class="mtab_ ' . $change_class . '">';

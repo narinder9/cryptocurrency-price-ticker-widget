@@ -1,10 +1,11 @@
 <?php
 /**
- * Plugin Name:Cryptocurrency Price Ticker Widget
- * Description:Cryptocurrency Price Ticker Widget WordPress plugin displays current prices of crypto coins - bitcoin, ethereum, ripple etc. using CoinMarketCap API. Add <strong><a href="http://bit.ly/crypto-widgets">premium cryptocurrency widgets</a></strong> inside your crypto blog or website. <strong><a href="http://bit.ly/COINMARKETCAP">Click to create a website similar like coinmarketcap.com.</a></strong>
- * Author:Cool Plugins Team
+ * Plugin Name:Cryptocurrency Widgets
+ * Description:Cryptocurrency Widgets WordPress plugin displays current prices of crypto coins - bitcoin, ethereum, ripple etc. using CoinMarketCap API. Add <strong><a href="https://1.envato.market/c/1258464/275988/4415?u=https%3A%2F%2Fcodecanyon.net%2Fitem%2Fcryptocurrency-price-ticker-widget-pro-wordpress-plugin%2F21269050">premium cryptocurrency widgets</a></strong> inside your crypto blog or website. <strong><a href="https://1.envato.market/c/1258464/275988/4415?u=https%3A%2F%2Fcodecanyon.net%2Fitem%2Fcoin-market-cap-prices-wordpress-cryptocurrency-plugin%2F21429844">Click to create a website similar like coinmarketcap.com.</a></strong>
+ * Author:Cool Plugins
  * Author URI:https://coolplugins.net/
- * Version: 1.8.2
+ * Plugin URI:https://cryptowidget.coolplugins.net/
+ * Version: 1.8.3
  * License: GPL2
  * Text Domain:ccpw
  * Domain Path: languages
@@ -34,10 +35,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( defined( 'Crypto_Currency_Price_Widget_VERSION' ) ) {
 	return;
 }
+
 /*
 	Defined constent for later use
 */
-define( 'Crypto_Currency_Price_Widget_VERSION', '1.8.2' );
+define( 'Crypto_Currency_Price_Widget_VERSION', '1.8.3' );
 define( 'Crypto_Currency_Price_Widget_FILE', __FILE__ );
 define( 'Crypto_Currency_Price_Widget_PATH', plugin_dir_path( Crypto_Currency_Price_Widget_FILE ) );
 define( 'Crypto_Currency_Price_Widget_URL', plugin_dir_url( Crypto_Currency_Price_Widget_FILE ) );
@@ -80,10 +82,11 @@ final class Crypto_Currency_Price_Widget {
 	private function __construct() {
 		$this->includes();
 		$this->installation_date();
+	
 		add_action( 'plugins_loaded', array( $this, 'init' ) );
 		//main plugin shortcode for list widget
 		add_shortcode( 'ccpw', array( $this, 'ccpw_shortcode' ));
-	
+		
 		add_action( 'save_post', array( $this,'save_ccpw_shortcode'),10, 3 );
 
 		//creating posttype for plugin settings panel
@@ -142,6 +145,13 @@ final class Crypto_Currency_Price_Widget {
 
 	$post_id=$atts['id'];
 
+	/*
+	 *	Return if post status is anything other than 'publish'
+	 */
+	if( get_post_status( $post_id ) != "publish" ){
+		return;
+	}
+
 	// Grab the metadata from the database
 	$type = get_post_meta($post_id,'type', true );
 	$currency = get_post_meta($post_id, 'currency', true);
@@ -149,7 +159,7 @@ final class Crypto_Currency_Price_Widget {
 	$ticker_position = get_post_meta($post_id,'ticker_position', true );
     $header_ticker_position = get_post_meta($post_id,'header_ticker_position', true );
 	$ticker_speed = get_post_meta($post_id,'ticker_speed', true ) ;
-	$t_speed=$ticker_speed ?$ticker_speed:30;
+	$t_speed=$ticker_speed ?$ticker_speed:15;
 	$display_currencies = get_post_meta($post_id,'display_currencies', true );
 	if($display_currencies==false){
 		$display_currencies=array();
@@ -183,21 +193,24 @@ final class Crypto_Currency_Price_Widget {
 
 	if($type=="ticker"){
 	$id = "ccpw-ticker-widget-" . $post_id;	
-	wp_enqueue_script('ccpw_marque_js',Crypto_Currency_Price_Widget_URL. 'assets/marquee/jquery.webticker.min.js',array( 'jquery' ));
-	 wp_add_inline_script('ccpw_marque_js', 'jQuery(document).ready(function($){
-	 	$(".ccpw-ticker-cont #'.$id.'").each(function(index){
-	 		var id="#"+$(this).attr("id");
-	 			$(id).webTicker({
-	 				speed:'.$t_speed.',
-	 				moving:true,
-	 				height:"34px",
-	 				 duplicate:true,
-	 				 hoverpause:true,
-	 				  startEmpty:false,
-	 				
-	 			});
-	 		});
-	 	});' );
+//	wp_enqueue_script('ccpw_marque_js',Crypto_Currency_Price_Widget_URL. 'assets/marquee/jquery.webticker.min.js',array( 'jquery' ));
+	wp_enqueue_script('ccpw_marque_js', '//cdn.jsdelivr.net/npm/jquery.marquee@1.5.0/jquery.marquee.min.js', array('jquery'), null, true);
+	wp_add_inline_script('ccpw_marque_js', 'jQuery(document).ready(function($){
+		$(".ccpw-ticker-cont #'.$id.'").each(function(index){
+			$(this).marquee({
+				allowCss3Support: true,
+				speed: '.$t_speed.'-'.$t_speed.'* 60/100,
+				pauseOnHover: true,
+				gap: 0,
+				delayBeforeStart: 0,
+				direction: "left",
+				duplicated: true,
+			startVisible: true,
+			});
+		});
+
+	});' );
+
 	} else if($type=="multi-currency-tab"){
 
 	wp_enqueue_script('ccpw_script',Crypto_Currency_Price_Widget_URL. 'assets/js/ccpwt-script.js',array('jquery'));
@@ -218,7 +231,7 @@ final class Crypto_Currency_Price_Widget {
 	$fnt_color=!empty($font_color)? "color:".$font_color.";":"color:#000;";
 	$fnt_coloronly=!empty($font_color)? ":".$font_color."57;":":#666;";
 	$fnt_colorlight=!empty($font_color)? ":".$font_color."1F;":":#eee;";
-	$ticker_top=!empty($header_ticker_position)? "top:".$header_ticker_position."px;":"top:0px;";
+	$ticker_top=!empty($header_ticker_position)? "top:".$header_ticker_position."px !important;":"top:0px !important;";
 
 	if ($type == "ticker") {
 		$id = "ccpw-ticker-widget-" . $post_id;	
@@ -289,7 +302,9 @@ final class Crypto_Currency_Price_Widget {
 			 	}
 
 		
-			$output .= '<div style="display:none" class="ccpw-container ccpw-ticker-cont '.$container_cls.'"><ul  id="'.$id.'">';
+			$output .= '<div style="display:none" class="ccpw-container ccpw-ticker-cont '.$container_cls.'">';
+			$output .= '<div class="tickercontainer" style="height: auto; overflow: hidden;"><div class="mask">';
+			$output .= '<ul  id="'.$id.'">';
 			$output .= $crypto_html;
 			$output .= '</ul></div>';
 
@@ -331,7 +346,7 @@ final class Crypto_Currency_Price_Widget {
 			
 		wp_add_inline_style('ppcw-styles', $cmc_css);
 
-		$ccpw_v='<!-- Cryptocurrency Price Ticker Widget Version:- '.Crypto_Currency_Price_Widget_VERSION.' By Cool Plugins Team -->';	
+		$ccpw_v='<!-- Cryptocurrency Widgets - Version:- '.Crypto_Currency_Price_Widget_VERSION.' By Cool Plugins (CoolPlugins.net) -->';	
 			return  $ccpw_v.$output;	
 		 
 	/*	}else{
@@ -436,7 +451,6 @@ function save_ccpw_shortcode( $post_id, $post, $update ) {
 	//check if review notice should be shown or not
 
 	function check_installation_time() {
-
 		$spare_me = get_option('ccpw_spare_me');
   		if(get_option('ccpw_spare_me')==false){
 		  $install_date = get_option( 'ccpw_activation_time' );
@@ -454,12 +468,15 @@ function save_ccpw_shortcode( $post_id, $post, $update ) {
 	    // wordpress global variable 
 	    global $pagenow;
 	//    if( $pagenow == 'index.php' ){
-	 
 	        $dont_disturb = esc_url( get_admin_url() . '?spare_me=1' );
 	        $plugin_info = get_plugin_data( __FILE__ , true, true );       
 	        $reviewurl = esc_url( 'https://wordpress.org/support/plugin/cryptocurrency-price-ticker-widget/reviews/#new-post' );
-	  	  printf(__('<div class="ccpw-review wrap"><img src="'.plugin_dir_url(__FILE__).'assets/crypto-widget.png" /><p>You have been using <b> %s </b> for a while. We hope you liked it ! Please give us a quick rating, it works as a boost for us to keep working on the plugin !<br/><br/><a href="%s" class="button button-primary" target=
-	            "_blank">Rate Now! ★★★★★</a><a href="http://bit.ly/crypto-widgets" class="button button-secondary" style="margin-left: 10px !important;" target="_blank"> Try Crypto Widgets Pro !</a><a href="%s" class="ccpw-review-done"> Already Done ☓</a></p></div>', $plugin_info['TextDomain']), $plugin_info['Name'], $reviewurl, $dont_disturb );
+			echo $html='<div class="ccpw-review wrap"><img src="'.plugin_dir_url(__FILE__).'assets/crypto-widget.png" />
+			<p>You have been using <b> '.$plugin_info['Name']. '</b> for a while. We hope you liked it ! Please give us a quick rating, it works as a boost for us to keep working on the plugin !<br/>
+			<br/><a href="'.$reviewurl.'" class="button button-primary" target=
+				"_blank">Rate Now! ★★★★★</a>
+				<a href="https://1.envato.market/c/1258464/275988/4415?u=https%3A%2F%2Fcodecanyon.net%2Fitem%2Fcryptocurrency-price-ticker-widget-pro-wordpress-plugin%2F21269050" class="button button-secondary" style="margin-left: 10px !important;" target="_blank"> Try Crypto Widgets Pro !</a>
+				<a href="'.$dont_disturb.'" class="ccpw-review-done"> Already Done ☓</a></p></div>';
 	       
 	   // }
 	}
@@ -565,7 +582,7 @@ function save_ccpw_shortcode( $post_id, $post, $update ) {
         <script type="text/javascript">
             jQuery(document).ready( function($)
             {
-				$(".wrap").find('a.page-title-action').after("<a  id='ccpwt_add_premium' href='http://bit.ly/crypto-widgets' target='_blank' class='add-new-h2'>Add Premium Widgets</a>");
+				$(".wrap").find('a.page-title-action').after("<a  id='ccpwt_add_premium' href='https://1.envato.market/c/1258464/275988/4415?u=https%3A%2F%2Fcodecanyon.net%2Fitem%2Fcryptocurrency-price-ticker-widget-pro-wordpress-plugin%2F21269050' target='_blank' class='add-new-h2'>Add Premium Widgets</a>");
                 
             });
         </script>

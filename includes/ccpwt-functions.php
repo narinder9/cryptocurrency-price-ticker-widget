@@ -160,7 +160,7 @@ function ccpw_get_coin_logo($coin_id,$size){
 	    <input type="text" class="regular-small" name="my_meta_box_text" id="my_meta_box_text" value="<?php echo htmlentities($dynamic_attr) ;?>" readonly/>
       <div>
         <br/>
-	   	<a class="button button-secondary red" target="_blank" href="https://bit.ly/COINMARKETCAP">How to create CoinMarketCap.com clone?</a>
+	   	<a class="button button-secondary red" target="_blank" href="https://1.envato.market/c/1258464/275988/4415?u=https%3A%2F%2Fcodecanyon.net%2Fitem%2Fcoin-market-cap-prices-wordpress-cryptocurrency-plugin%2F21429844">How to create CoinMarketCap.com clone?</a>
      </div>
 	    <?php 
 	}
@@ -199,7 +199,7 @@ function ccpw_get_coin_logo($coin_id,$size){
 		<li><a target="_blank" href="http://cryptowidgetpro.coolplugins.net/">'.__('VIEW ALL DEMOS','ccpw').'</a></li>
 
 		</ol>
-		<a class="button button-secondary" target="_blank" href="https://bit.ly/crypto-widgets">'.__('Buy Now','ccpw').' ($29)</a>
+		<a class="button button-secondary" target="_blank" href="https://1.envato.market/c/1258464/275988/4415?u=https%3A%2F%2Fcodecanyon.net%2Fitem%2Fcryptocurrency-price-ticker-widget-pro-wordpress-plugin%2F21269050s">'.__('Buy Now','ccpw').' ($29)</a>
 		</div>';
         echo $pro_add ;
 
@@ -258,7 +258,7 @@ function ccpw_get_coin_logo($coin_id,$size){
     $labels = array(
       'name' => _x('CryptoCurrency Price Widget', 'Post Type General Name', 'ccpw'),
       'singular_name' => _x('CryptoCurrency Price Widget', 'Post Type Singular Name', 'ccpw'),
-      'menu_name' => __('Crypto Widget', 'ccpw'),
+      'menu_name' => __('Crypto Widgets', 'ccpw'),
       'name_admin_bar' => __('Post Type', 'ccpw'),
       'archives' => __('Item Archives', 'ccpw'),
       'attributes' => __('Item Attributes', 'ccpw'),
@@ -437,6 +437,9 @@ function ccpw_get_coin_logo($coin_id,$size){
         'aion' => 'Aion',
         'waltonchain' => 'Waltonchain',
 
+      ),
+      'attributes' => array(
+          'required' => true
       )
     ));
 
@@ -446,7 +449,7 @@ function ccpw_get_coin_logo($coin_id,$size){
       'desc' => '',
       'id' => 'currency',
       'type' => 'select',
-      'show_option_none' => true,
+      'show_option_none' => false,
       'default' => 'custom',
       'options' => $currencies_arr,
       'default' => 'USD',
@@ -490,7 +493,7 @@ function ccpw_get_coin_logo($coin_id,$size){
 
     $cmb->add_field(array(
       'name' => 'Ticker Position(Top)',
-      'desc' => 'Specify Top position value of ticker(in px)',
+      'desc' => 'Specify Top Margin (in px) - Only For Header Ticker',
       'id' => 'header_ticker_position',
       'type' => 'text',
       'default' => '33',
@@ -503,7 +506,7 @@ function ccpw_get_coin_logo($coin_id,$size){
 
     $cmb->add_field(array(
       'name' => 'Speed of Ticker',
-      'desc' => 'Enter the speed of ticker (between 20-100)',
+      'desc' => 'Enter the speed of ticker (between 10-80)',
       'id' => 'ticker_speed',
       'type' => 'text',
       'default' => '30',
@@ -546,13 +549,13 @@ function ccpw_get_coin_logo($coin_id,$size){
       'desc' => '
   <h3>Check Our Cool Premium Crypto Plugins - Now Create Website Similar Like CoinMarketCap.com<br/></h3>
   <div class="cmc_pro">
-  <a target="_blank" href="https://bit.ly/crypto-widgets"><img style="max-width:100%;" src="https://res.cloudinary.com/coolplugins/image/upload/v1530694709/crypto-exchanges-plugin/banner-crypto-widget-pro.png"></a>
+  <a target="_blank" href="https://1.envato.market/c/1258464/275988/4415?u=https%3A%2F%2Fcodecanyon.net%2Fitem%2Fcryptocurrency-price-ticker-widget-pro-wordpress-plugin%2F21269050"><img style="max-width:100%;" src="https://res.cloudinary.com/coolplugins/image/upload/v1530694709/crypto-exchanges-plugin/banner-crypto-widget-pro.png"></a>
   </div><hr/>
     <div class="cmc_pro">
-   <a target="_blank" href="https://bit.ly/COINMARKETCAP"><img style="max-width:100%;"src="https://res.cloudinary.com/coolplugins/image/upload/v1530695051/crypto-exchanges-plugin/banner-coinmarketcap.png"></a>
+   <a target="_blank" href="https://1.envato.market/c/1258464/275988/4415?u=https%3A%2F%2Fcodecanyon.net%2Fitem%2Fcoin-market-cap-prices-wordpress-cryptocurrency-plugin%2F21429844"><img style="max-width:100%;"src="https://res.cloudinary.com/coolplugins/image/upload/v1530695051/crypto-exchanges-plugin/banner-coinmarketcap.png"></a>
    </div><hr/>
     <div class="cmc_pro">
-   <a target="_blank" href="https://bit.ly/cryptocurrency-exchanges"><img style="max-width:100%;"src="https://res.cloudinary.com/coolplugins/image/upload/v1530694721/crypto-exchanges-plugin/banner-crypto-exchanges.png"></a> </div>',
+   <a target="_blank" href="https://1.envato.market/c/1258464/275988/4415?u=https%3A%2F%2Fcodecanyon.net%2Fitem%2Fcryptocurrency-exchanges-list-pro-wordpress-plugin%2F22098669"><img style="max-width:100%;"src="https://res.cloudinary.com/coolplugins/image/upload/v1530694721/crypto-exchanges-plugin/banner-crypto-exchanges.png"></a> </div>',
       'type' => 'title',
       'id' => 'cmc_title'
     ));
