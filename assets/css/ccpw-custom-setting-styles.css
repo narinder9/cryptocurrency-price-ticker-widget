@@ -1,0 +1,42 @@
+.ccpw-get-started {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  gap: 30px;
+}
+.ccpw-get-started * {
+  font-size: 15px !Important;
+  line-height: 1.6em !Important;
+  border-collapse: collapse;
+}
+.ccpw-get-started a {
+  white-space: nowrap;
+}
+.ccpw-get-started-left, .ccpw-get-started-right {
+  width: calc(50% - 15px);
+}
+.ccpw-get-started-right table tr th, .ccpw-get-started-right table tr td {
+  border: 1px solid #ddd;
+  text-align: center;
+  border-collapse: collapse !IMPORTANT;
+  padding: 12px 10px;
+}
+.ccpw-get-started-right table tr th:first-child, .ccpw-get-started-right table tr td:first-child {
+  font-weight: 600;
+  text-align: left;
+}
+.ccpw-get-started .button {
+  line-height: 2.2em !IMPORTANT;
+}
+  
+@media (max-width: 790px) {
+  .ccpw-get-started a {
+    white-space: wrap;
+  }
+  .ccpw-get-started-left, .ccpw-get-started-right {
+    width: 100%;
+  }
+  .ccpw-get-started-right table tr th, .ccpw-get-started-right table tr td {
+    display: table-cell;
+}
+} 

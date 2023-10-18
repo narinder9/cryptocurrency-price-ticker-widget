@@ -1,0 +1,71 @@
+tr[data-slug="cryptocurrency-widgets"] .plugin-description strong a {
+    color: #eda600;
+    font-size: 14px;
+}
+.cmb-td span.select2.select2-container.select2-container--default.select2-container--below {
+    width: 100% !important;
+}
+a.button.button-secondary.red {
+    background-color: #df450b;
+    color: #fffefd;
+}
+.ccpw-review{
+	background: #ffffff !important;
+    border-left: 4px solid #ffba00;
+    padding: 15px !important;
+    max-width: 860px;
+    display: inline-block;
+    border-radius: 4px;
+    clear: both;
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+}
+.ccpw-review img{
+	display: inline;float: left;margin-right: 14px;border: 4px solid #e7e2ce;border-radius: 3px;
+}
+.ccpw-review p {
+	display: inline;vertical-align: top;
+}
+.ccpw-review-btn{
+	padding-top: 5px;
+}
+.ccpw-review-done{
+	float: right;
+	text-decoration: none;
+}
+.warning{
+    color:red;
+    display:block;
+    font-weight: 500;
+}
+.cmb2-wrap .cmb-row {
+    padding-bottom: 10px !important;
+}
+.selection .select2-search--inline {
+    width: 100%;
+}
+ /* #toplevel_page_cool-crypto-plugins ul li:nth-child(6) {
+    display: none;
+
+}   */
+
+
+/*--- Pro visibility styles in add_new_widget ---*/
+
+#generate_shortcode .cmb2-id-accordion-block,  #generate_shortcode .cmb2-id-price-block,
+#generate_shortcode .cmb2-id-price-card,  #generate_shortcode .cmb2-id-chart,
+#generate_shortcode .cmb2-id-slider-widget,  #generate_shortcode .cmb2-id-calculator,
+#generate_shortcode .cmb2-id-rss-feed, #generate_shortcode .cmb2-id-technical-analysis,
+#generate_shortcode .cmb2-id-binance-live-widget, #generate_shortcode .cmb2-id-coingecko-widget {
+    text-align: center;
+}
+
+#generate_shortcode option[value="accordion-block"], #generate_shortcode option[value="price-block"],
+#generate_shortcode option[value="price-card"], #generate_shortcode option[value="chart"],
+#generate_shortcode option[value="slider-widget"], #generate_shortcode option[value="calculator"],
+#generate_shortcode option[value="rss-feed"], #generate_shortcode option[value="technical-analysis"],
+#generate_shortcode option[value="binance-live-widget"], #generate_shortcode option[value="coingecko-widget"] {
+    background: #ddd;
+    color: #555;
+}
+/*--- END - Pro visibility styles in add_new_widget ---*/

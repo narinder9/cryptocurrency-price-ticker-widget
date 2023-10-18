@@ -1,0 +1,88 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Cryptocurrency Widgets\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-27 12:09+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: includes/ccpw-shortcode.php:64
+msgid "Powered by CoinGecko API"
+msgstr ""
+
+#: includes/ccpw-shortcode.php:111 includes/ccpw-shortcode.php:135
+#: includes/ccpw-shortcode.php:250
+msgid "You have not selected any currencies to display"
+msgstr ""
+
+#: includes/ccpw-shortcode.php:191 includes/ccpw-shortcode.php:283
+msgid "Name"
+msgstr ""
+
+#: includes/ccpw-shortcode.php:192 includes/ccpw-shortcode.php:284
+msgid "Price"
+msgstr ""
+
+#: includes/ccpw-shortcode.php:194
+msgid "24H (%)"
+msgstr ""
+
+#: includes/ccpw-shortcode.php:229
+msgid "Previous"
+msgstr ""
+
+#: includes/ccpw-shortcode.php:230
+msgid "Next"
+msgstr ""
+
+#: includes/ccpw-shortcode.php:231
+msgid "Loading..."
+msgstr ""
+
+#: includes/ccpw-shortcode.php:232
+msgid "No Coin Found"
+msgstr ""
+
+#: includes/ccpw-shortcode.php:282
+msgid "#"
+msgstr ""
+
+#: includes/ccpw-shortcode.php:285
+msgid "Changes 24h"
+msgstr ""
+
+#: includes/ccpw-shortcode.php:286
+msgid "Market CAP"
+msgstr ""
+
+#: includes/ccpw-shortcode.php:288
+msgid "Volume"
+msgstr ""
+
+#: includes/ccpw-shortcode.php:289
+msgid "Supply"
+msgstr ""
+
+#. Name of the plugin
+msgid "Cryptocurrency Widgets"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://cryptowidget.coolplugins.net/"
+msgstr ""
+
+#. Author of the plugin
+msgid "Cool Plugins"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://coolplugins.net/"
+msgstr ""
